@@ -18,5 +18,5 @@ window.onload = function(){
 		let obj =document.getElementById("help");
 		obj.style.backgroundColor="rgba(0,128,128,0.3)";
 		
-	}
+    }
 }
