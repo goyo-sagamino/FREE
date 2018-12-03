@@ -90,7 +90,17 @@
         <div class="container">
             <div class="row">
                 <div class = "col-md-7 content">
-                	<table class = "table table-bordered table-striped" id = "calendar">
+                <h2 class = "title" id = "hoge"></h2>
+                <script>
+                	let time = new Date();
+                	
+                	var hoge = document.getElementById("hoge")
+                	var text = document.createTextNode("カレンダー  "+ (time.getMonth()+1)+"月");
+                	hoge.appendChild(text);
+                	
+                </script>
+                	<div class = "col-md-12 row">
+                	<table class = "table table-bordered table-striped col-md-12" id = "calendar">
                 		<tr>
                 			<th scope = "col" class = "sun">日</th>
                 			<th scope = "col" class = "mon">月</th>
@@ -106,55 +116,118 @@
                 			<td class = "mon"></td>
                 			<td class = "tue"></td>
                 			<td class = "wed"></td>
-                			<td class = "thu">1</td>
-                			<td class = "fri">2</td>
-                			<td class = "sat">3</td>
+                			<td class = "thu"></td>
+                			<td class = "fri"></td>
+                			<td class = "sat d" id = "td1">1</td>
                 		</tr>
                 		
                 		<tr class = "one">
-                			<td class = "sun">4</td>
-                			<td class = "mon">5</td>
-                			<td class = "tue">6</td>
-                			<td class = "wed">7</td>
-                			<td class = "thu">8</td>
-                			<td class = "fri">9</td>
-                			<td class = "sat">10</td>
+                			<td class = "sun d" id = "td2">2</td>
+                			<td class = "mon d" id = "td3">3</td>
+                			<td class = "tue d" id = "td4">4</td>
+                			<td class = "wed d" id = "td5">5</td>
+                			<td class = "thu d" id = "td6">6</td>
+                			<td class = "fri d" id = "td7">7</td>
+                			<td class = "sat d" id = "td8">8</td>
                 		</tr>
                 		
                 		<tr class = "two">
-                			<td class = "sun">11</td>
-                			<td class = "mon">12</td>
-                			<td class = "tue">13</td>
-                			<td class = "wed">14</td>
-                			<td class = "thu">15</td>
-                			<td class = "fri">16</td>
-                			<td class = "sat">17</td>
+                			<td class = "sun d" id = "td9">9</td>
+                			<td class = "mon d" id = "td10">10</td>
+                			<td class = "tue d" id = "td11">11</td>
+                			<td class = "wed d" id = "td12">12</td>
+                			<td class = "thu d" id = "td13">13</td>
+                			<td class = "fri d" id = "td14">14</td>
+                			<td class = "sat d" id = "td15">15</td>
                 		</tr>
                 		
                 		<tr class = "thr">
-                			<td class = "sun">18</td>
-                			<td class = "mon">19</td>
-                			<td class = "tue">20</td>
-                			<td class = "wed">21</td>
-                			<td class = "thu">22</td>
-                			<td class = "fri">23</td>
-                			<td class = "sat">24</td>
+                			<td class = "sun d" id = "td16">16</td>
+                			<td class = "mon d" id = "td17">17</td>
+                			<td class = "tue d" id = "td18">18</td>
+                			<td class = "wed d" id = "td19">19</td>
+                			<td class = "thu d" id = "td20">20</td>
+                			<td class = "fri d" id = "td21">21</td>
+                			<td class = "sat d" id = "td22">22</td>
                 		</tr>
                 		
                 		<tr class = "fou">
-                			<td class = "sun">25</td>
-                			<td class = "mon">26</td>
-                			<td class = "tue">27</td>
-                			<td class = "wed">28</td>
-                			<td class = "thu">29</td>
-                			<td class = "fri">30</td>
+                			<td class = "sun d" id = "td23">23</td>
+                			<td class = "mon d" id = "td24">24</td>
+                			<td class = "tue d" id = "td25">25</td>
+                			<td class = "wed d" id = "td26">26</td>
+                			<td class = "thu d" id = "td27">27</td>
+                			<td class = "fri d" id = "td28">28</td>
+                			<td class = "sat d" id = "td29">29</td>
+                		</tr>
+                		
+                		<tr class = "fiv">
+                			<td class = "sun d" id = "td30">30</td>
+                			<td class = "mon d" id = "td31">31</td>
+                			<td class = "tue"></td>
+                			<td class = "wed"></td>
+                			<td class = "thu"></td>
+                			<td class = "fri"></td>
                 			<td class = "sat"></td>
                 		</tr>
                 	</table>
+                	<script>
+                		let day = new Date();
+				    let obj = document.getElementById("td" + day.getDate());
+				    obj.style.backgroundColor = "rgba(0,128,128,0.3)";
+				    
+				    
+				    var elementClass = document.getElementsByClassName("d");
+				    var elements = Array.prototype.slice.call(elementClass);
+				    console.log(elementClass);
+				    
+				    
+				    for (let j in elements){
+					    elements[j].onclick = function(){
+					    	let num = Number(j)+1;
+					    	let obj = document.getElementById("reminder");
+					    	
+					    	let obj1 = document.getElementById("calendar");
+					    	var div = document.createElement("div");
+					    	div.setAttribute("id","rayer1")
+					    	div.classList.add("col-md-11");
+					    	var text = document.createTextNode("カレンダー："+(day.getMonth()+1)+"月"+num+"日がクリックされました。");
+					    	div.appendChild(text);
+					    	obj1.appendChild(div);
+					    	var br = document.createElement("br");
+					    	div.appendChild(br);
+					    	
+					    	var btn1 = document.createElement("button");
+					    	var btn2 = document.createElement("button");
+					    	var br1 = document.createElement("br");
+					    	var btn3 = document.createElement("button");
+					    	
+					    	var text1 = document.createTextNode("予定の確認");
+					    	var text2 = document.createTextNode("予定表の作成");
+					    	var text3 = document.createTextNode("戻る");
+					    	
+					    	btn1.appendChild(text1);
+					    	div.appendChild(btn1);
+					    	btn2.appendChild(text2);
+					    	div.appendChild(btn2);
+					    	div.appendChild(br1);
+					    	btn3.appendChild(text3);
+					    	div.appendChild(btn3);
+					    	
+					    	btn3.onclick = function(){
+					    		var obj = document.getElementById("rayer1");
+					    		obj.parentNode.removeChild(obj);
+					    	};
+				    	};
+				    };
+                	</script>
+                </div>
                 </div>
                 
                 <div class="col-md-5 content">
-                    <p>小式部内侍</p>
+                    <h2 class="title">リマインダー</h2>
+                    <div id = "reminder">
+                    <div>
                 </div>
             </div>
         </div>

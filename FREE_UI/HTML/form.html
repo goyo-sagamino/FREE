@@ -8,6 +8,7 @@
 		<link rel="stylesheet" href="../css/CommonStyle.css">
 		
 		<script type="text/javascript" src = "../script/script.js"></script>
+		
 	</head>
 	
 	<body>
@@ -64,15 +65,180 @@
 	
 	<div class = "container">
 			<div class = "row">
-				<div class = "col-md-6 content">
-				<p>秋の田の<br>　刈穂のいほの<br>　　苫をあらみ<br>　わが衣では<br>　　露に濡れつつ<p>
+				<div class = "col-md-12 content">
+					<h2 class = "title">大まかな生活リズム</h2>
+					<div class = "row">
+						<div class = "col-md-6 base1" style="border-right: 1px dotted #000;"  id = "container">
+							<p id = "smallTitle">休日・平日の選択</p>
+							<button id = "weekdays">平日の流れ</button>
+							<br>
+							<button id = "holidays">休日の流れ</button>
+						</div>
+					</div>
 				</div>
 				
-				<div class = "col-md-6 content">
-				<p>持統天皇</p>
+				<div class = "col-md-12 content">
+				<h2 class = "title">趣味について</h2>
 				</div>
 			</div>
 	</div>
 	
+	<script>
+		document.getElementById("weekdays").onclick = function () {
+		
+		var obj0 = document.getElementById("smallTitle");
+
+		
+		
+        var div0 = document.getElementById("container");
+
+        var div1 = document.createElement("div");
+        div1.classList.add("col-md-12");
+        div1.classList.add("new");
+
+        var div2 = document.createElement("div");
+        div2.classList.add("row");
+
+        
+
+        
+        
+        
+
+        var title = ["・就寝時間", "・朝食", "・学校または仕事", "・自主学習", "・夕食", "・趣味など", "・その他"];
+	        for (var i in title) {
+	        
+	        	var div3 = document.createElement("div");
+        		div3.classList.add("col-md-6");
+
+	            var p = document.createElement("p");
+	            var text = document.createTextNode(title[i]);
+
+	            var div4 = document.createElement("div");
+	            div4.classList.add("ft");
+
+	            var timeInput1 = document.createElement("input");
+	            timeInput1.classList.add("new");
+	            timeInput1.setAttribute("type", "time");
+	            timeInput1.setAttribute("value", "00:00");
+
+	            var mark = document.createTextNode("～");
+
+	            var timeInput2 = document.createElement("input");
+	            timeInput2.classList.add("new");
+	            timeInput2.setAttribute("type", "time");
+	            timeInput2.setAttribute("value", "00:00");
+
+	            div3.appendChild(p);
+	            p.appendChild(text);
+	            
+	            div4.appendChild(timeInput1);
+	            div4.appendChild(mark);
+	            div4.appendChild(timeInput2);
+	            div3.appendChild(div4);
+	            div2.appendChild(div3);
+	        };
+	        
+	    var button1 = document.createElement("button");
+	    var bName1 = document.createTextNode("戻る");
+	    
+	    var button2 = document.createElement("button");
+	    var bName2 = document.createTextNode("完了");
+	    
+	    button1.appendChild(bName1);
+	    button2.appendChild(bName2);
+	    
+
+            div1.appendChild(div2);
+            div1.appendChild(button1);
+            div1.appendChild(button2);
+            div0.appendChild(div1);
+            
+        button1.onclick = function(){
+        	jQuery(function($){
+        		$(".new").detach('');
+		
+        	});
+        };
+        
+    };
+    
+    document.getElementById("holidays").onclick = function () {
+		
+		var obj0 = document.getElementById("smallTitle");
+
+        var div0 = document.getElementById("container");
+
+        var div1 = document.createElement("div");
+        div1.classList.add("col-md-12");
+        div1.classList.add("new");
+
+        var div2 = document.createElement("div");
+        div2.classList.add("row");
+
+        
+
+        
+        
+        
+
+        var title = ["・就寝時間", "・朝食", "・自主学習", "・夕食", "・趣味など", "・その他"];
+	        for (var i in title) {
+	        
+	        	var div3 = document.createElement("div");
+        		div3.classList.add("col-md-6");
+
+	            var p = document.createElement("p");
+	            var text = document.createTextNode(title[i]);
+
+	            var div4 = document.createElement("div");
+	            div4.classList.add("ft");
+
+	            var timeInput1 = document.createElement("input");
+	            timeInput1.classList.add("new");
+	            timeInput1.setAttribute("type", "time");
+	            timeInput1.setAttribute("value", "00:00");
+
+	            var mark = document.createTextNode("～");
+
+	            var timeInput2 = document.createElement("input");
+	            timeInput2.classList.add("new");
+	            timeInput2.setAttribute("type", "time");
+	            timeInput2.setAttribute("value", "00:00");
+
+	            div3.appendChild(p);
+	            p.appendChild(text);
+	            
+	            div4.appendChild(timeInput1);
+	            div4.appendChild(mark);
+	            div4.appendChild(timeInput2);
+	            div3.appendChild(div4);
+	            div2.appendChild(div3);
+	        };
+	        
+	    var button1 = document.createElement("button");
+	    var bName1 = document.createTextNode("戻る");
+	    
+	    var button2 = document.createElement("button");
+	    var bName2 = document.createTextNode("完了");
+	    
+	    button1.appendChild(bName1);
+	    button2.appendChild(bName2);
+	    
+
+            div1.appendChild(div2);
+            div1.appendChild(button1);
+            div1.appendChild(button2);
+            div0.appendChild(div1);
+            
+        button1.onclick = function(){
+        	jQuery(function($){
+        		$(".new").detach('');
+		
+        	});
+        };
+        
+    };
+	</script>
 	</body>
 </html>
