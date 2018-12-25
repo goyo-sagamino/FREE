@@ -1,6 +1,7 @@
 body{
 	background-color:rgba(10,10,59,0.1);
 }
+
 .label1{
 	background-color: #2f4f4f;
 	color: #ffffff;
@@ -9,12 +10,20 @@ body{
 	padding-top: 5px;
 	padding-left: 10px;
 	margin:0;
+	position:fixed;
+	left:0;
+	width:100%;
+	z-index:2;
+
 }
 .label2{
-	background: rgba(176,196,222,0.5);
+	background: rgba(176,196,222,0.8);
 	width: 100%;
 	margin-bottom:20px;
-
+	position:fixed;
+	top:40px;
+	width:100%;
+	z-index:2;
 }
 .col-md-2{
 	text-align: center;
@@ -23,12 +32,24 @@ body{
 	padding:0;
 }
 
+.main{
+	position: absolute;
+	top:80px;
+	z-index:1;
+	width:100%;
+}
+
 .btn-link{
 	margin:0;
 	height:20px;
 	width:100%;
 	fontsize:15px;
 	padding:0;
+}
+
+table p{
+	padding: 6px;
+	margin: 0;
 }
 
 .content{
@@ -64,9 +85,11 @@ a{
 
 th{
 	height: 60px;
+	padding:0;
 }
 td{
 	height: 60px;
+	pdding:0;
 }
 
 td:hover{
@@ -91,16 +114,17 @@ td:active{
 	margin: 10px;	
 }
 
-#calendar{
+#calendarBase{
 	position:relative;
 	z-index:1;
 }
 
-#calendar div{
+#layerBase{
 	position:absolute;
-	left:20px;
-	top:0px;
+	left:30px;
+	top:60px;
 	height: 410px;
+	width: 90%;
 	max-width: 570px;
 	background-color:rgba(0,0,0,0.8);
 	z-index:2;
@@ -124,3 +148,12 @@ div button{
 	background-color: rgba(10,10,59,0.05);
 }
 
+chart{
+	margin: auto 0 auto 0;
+}
+
+#layerBase textarea{
+	margin-left: 20px;
+	width: 90%;
+	max-width: 450px;
+}

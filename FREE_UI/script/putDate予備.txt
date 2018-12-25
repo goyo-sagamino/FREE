@@ -1,0 +1,40 @@
+for (let j in elements){
+                elements[j].onclick = function () {
+                    let num = Number(j) + 1;
+                    let obj = document.getElementById("reminder");
+
+                    let obj1 = document.getElementById("calendar");
+                    var div = document.createElement("div");
+                    div.setAttribute("id", "rayer1")
+                    div.classList.add("col-md-11");
+                    var text = document.createTextNode("カレンダー：" + (day.getMonth() + 1) + "月" + num + "日がクリックされました。");
+                    var br = document.createElement("br");
+                    div.appendChild(br);
+                    div.appendChild(text);
+                    obj1.appendChild(div);
+                    ;
+
+                    var btn1 = document.createElement("button");
+                    var btn2 = document.createElement("button");
+                    var br1 = document.createElement("br");
+                    var btn3 = document.createElement("button");
+
+                    var text1 = document.createTextNode("予定の確認");
+                    var text2 = document.createTextNode("予定表の作成");
+                    var text3 = document.createTextNode("戻る");
+
+                    btn1.appendChild(text1);
+                    div.appendChild(btn1);
+                    btn2.appendChild(text2);
+                    div.appendChild(btn2);
+                    div.appendChild(br1);
+                    btn3.appendChild(text3);
+                    div.appendChild(btn3);
+
+                    btn3.onclick = function () {
+                        var obj = document.getElementById("rayer1");
+                        obj.parentNode.removeChild(obj);
+
+                    };
+                };
+			};
