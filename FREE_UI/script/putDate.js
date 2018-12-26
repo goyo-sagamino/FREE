@@ -82,11 +82,6 @@ var put = function(con){
 		};
 		var days = ["sun", "mon", "tue", "wed", "thu", "fri", "sat"];
 		var weeks = ["zer", "one", "two", "thr", "fou", "fiv"];
-		//for (var count in weeks) {
-		   // var tr = document.getElementById(weeks[count]);
-		   // var childs = tr.childNodes;
-		   // console.log(childs);
-		//};
 
 		var tr = document.getElementById("zer");  //カレンダーの一週目を取得
 		var children = tr.childNodes;  //一週目のtr要素の子要素すべてを取得
@@ -123,7 +118,6 @@ var put = function(con){
 		    		grandson1[0].appendChild(p);
 		    		p.appendChild(text1);
                     grandson1[0].setAttribute("id", "td" + day[0]);
-                    /*grandson1[0].classList.add("d");*/
 		    		day.shift();
 		    	}
 		    	
@@ -160,13 +154,13 @@ var layer = function(num){
 			var layer = document.createElement("div");
 			layer.setAttribute("id","layerBase");
 			
+			var div1 = document.createElement("div");
+			div1.setAttribute("id","firstDiv");
+			
 			var text = document.createTextNode(dt.getFullYear()+"年"+(dt.getMonth()+1)+"月"+day+"日がクリックされました。");
 			
 			var br = document.createElement("br");
 			br.setAttribute("class","onTheLayer");
-			
-			var textArea = document.createElement("textarea");
-			textArea.setAttribute("id","subject");
 			
 			var button1 = document.createElement("button");
 			var button2 = document.createElement("button");
@@ -179,27 +173,61 @@ var layer = function(num){
 			var text6 = document.createTextNode("リマインダーを設定");
 			
 			layer.appendChild(text);
-			layer.appendChild(br);
-			layer.appendChild(textArea);
-			layer.appendChild(br);
+			div1.appendChild(br);
+			div1.appendChild(br);
 			button1.appendChild(text5);
 			button2.appendChild(text6);
-			layer.appendChild(button1);
-			layer.appendChild(button2)
+			div1.appendChild(button1);
+			div1.appendChild(button2);
+			layer.appendChild(div1);
 			base.appendChild(layer);
+			
+			//______________________________________________________________________
+			var div2 = document.createElement("div");
+			div2.setAttribute("id","secondDiv");
+			
+			var textArea = document.createElement("textarea");
+			textArea.setAttribute("id","subject");
+			
+			var button1 = document.createElement("button");
+			var text1 = document.createTextNode("リマインダーの登録");
+			
+			div2.appendChild(textArea);
+			
+			button1.appendChild(text1);
+			div2.appendChild(button1);
+			
+			layer.appendChild(div2);
+			
+			div1.style.display = "block";
+			div2.style.display = "none";
 			
 			returnFromLayer.onclick = function(){
 				layer.remove();
 			};
 			
 			setReminder.onclick = function(){
-				console.log(day);
-				var rem = document.getElementById("reminder");
-				var getValue = document.getElementById("subject").value;
 				
-				var text = document.createTextNode(getValue);
-				rem.appendChild(text);
+				var target1 = document.getElementById("firstDiv");
+				var target2 = document.getElementById("secondDiv");
 				
+				target1.style.display = "none";
+				target2.style.display = "block";
+				
+				button1.onclick = function(){
+					console.log(day);
+					var rem = document.getElementById("reminder");
+					var getValue = document.getElementById("subject").value;
+					
+					var text = document.createTextNode(getValue);
+					rem.appendChild(text);
+					
+					var target1 = document.getElementById("firstDiv");
+					var target2 = document.getElementById("secondDiv");
+					
+					target1.style.display = "block";
+					target2.style.display = "none";
+				};
 			};
 		};
 	};

@@ -77,13 +77,16 @@
 					<h2 class = "title">大まかな生活リズム</h2>
 					<div class = "row">
 						<div class = "col-md-6 base1" style="border-right: 1px dotted #000;"  id = "container">
-							<p id = "smallTitle">休日・平日の選択</p>
-							<button id = "weekdays">平日の流れ</button>
-							<br>
-							<button id = "holidays">休日の流れ</button>
+							<div id = "firstDiv">
+								<p id = "smallTitle">休日・平日の選択</p>
+								<button id = "weekdays">平日の流れ</button>
+								<br>
+								<button id = "holidays">休日の流れ</button>
+							</div>
 							
+							<div class = "row" id = "seconDiv"></div>
 							
-							
+							<div class = "row" id = "thirDiv"></div>
 						</div>
 						
 						<div class = "col-md-6" id = "container"  [hidden]="chart===null">
