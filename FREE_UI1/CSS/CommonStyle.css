@@ -1,0 +1,168 @@
+body{
+	background-color:rgba(10,10,59,0.1);
+}
+
+.label1{
+	background-color: #2f4f4f;
+	color: #ffffff;
+	height: 40px;
+	font-size: 20px;
+	padding-top: 5px;
+	padding-left: 10px;
+	margin:0;
+	position:fixed;
+	left:0;
+	width:100%;
+	z-index:2;
+
+}
+#label2{
+	background: rgba(176,196,222,0.8);
+	width: 100%;
+	margin-bottom:20px;
+	position:fixed;
+	top:40px;
+	width:100%;
+	z-index:2;
+}
+.col-md-2{
+	text-align: center;
+	border-bottom: 	1px solid #2f4f4f;
+	height:30px;
+	padding:0;
+}
+
+.main{
+	position: relative;
+	top:80px;
+	z-index:1;
+	width:100%;
+}
+
+.btn-link{
+	color :#2f4f4f;
+	margin:0;
+	height:20px;
+	width:100%;
+	fontsize:15px;
+	padding:0;
+}
+
+table p{
+	padding: 6px;
+	margin: 0;
+}
+
+.content{
+	background: #fff;
+	border-bottom: 4px solid rgba(10,10,59,0.1);
+	border-right: 2px solid rgba(10,10,59,0.1);
+	border-radius: 10px;
+	padding:10px;
+	align:center;
+}
+
+.title{
+	background:rgba(176,196,222,0.2);
+	padding: 10px;
+	text-align: center;
+	border-radius: 10px;
+}
+
+a{
+	color: #2f4f4f;
+}
+
+#clock{
+	text-align: center;
+}
+#date{
+	text-align: center;
+}
+
+.clock{
+	border-radius: 20px;
+}
+
+th{
+	height: 60px;
+	padding:0;
+}
+td{
+	height: 60px;
+	pdding:0;
+}
+
+td:hover{
+	background-color: rgba(10,10,59,0.1);
+}
+
+td:active{
+	background-color: rgba(10,10,59,0.05);
+}
+
+.sun{
+	background: rgba(165,42,42,0.1);
+	color:rgb(165,42,42);
+}
+
+.sat{
+	background: rgba(70,130,180,0.1);
+	color:rgb(70,130,180);
+}
+
+#reminder button{
+	margin: 10px;	
+}
+
+#calendarBase{
+	position:relative;
+	z-index:1;
+}
+
+#layerBase{
+	position:absolute;
+	left:20px;
+	top:60px;
+	height: 410px;
+	width: 93%;
+	max-width: 650px;
+	background-color:rgba(0,0,0,0.8);
+	z-index:2;
+	color:white;
+	font-size: 20px;
+	border-radius: 10px;
+}
+div button{
+	margin: 10px;
+}
+
+.ft{
+	text-align:center;
+}
+
+.ft button:hover{
+	background-color: rgba(10,10,59,0.1);
+}
+
+.ft button:activ{
+	background-color: rgba(10,10,59,0.05);
+}
+
+chart{
+	margin: auto 0 auto 0;
+}
+
+#layerBase textarea{
+	margin-left: 20px;
+	width: 90%;
+	max-width: 450px;
+}
+
+.check{
+	border-bottom: 2px dotted #2f4f4f;
+}
+
+.pf{
+	text-align : center;
+}

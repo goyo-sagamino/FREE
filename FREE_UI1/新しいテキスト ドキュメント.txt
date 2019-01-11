@@ -1,0 +1,72 @@
+<div class = "row">
+							
+								<div class = "col-md-6">
+									<p>ÅEèAêQéûä‘<p>
+									
+									<div class = " ft">
+									<input type="time" value = "22:00">Å`
+									<input type="time" value = "06:00">
+									</div>
+									
+								</div>
+							
+								<div class = "col-md-6">
+									<p>ÅEí©êH<p>
+									
+									<div class = " ft">
+									<input type="time" value = "06:30">Å`
+									<input type="time" value = "07:00">
+									</div>
+									
+								</div>
+							
+								<div class = "col-md-6">
+									<p>ÅEäwçZÅEÇ‹ÇΩÇÕédéñ<p>
+									
+									<div class = " ft">
+									<input type="time" value = "08:00">Å`
+									<input type="time" value = "21:00">
+									</div>
+									
+								</div>
+							
+								<div class = "col-md-6">
+									<p>ÅEé©éÂäwèK<p>
+									
+									<div class = " ft">
+									<input type="time" value = "00:00">Å`
+									<input type="time" value = "00:00">
+									</div>
+									
+								</div>
+							
+								<div class = "col-md-6">
+									<p>ÅEó[êH<p>
+									
+									<div class = " ft">
+									<input type="time" value = "00:00">Å`
+									<input type="time" value = "00:00">
+									</div>
+									
+								</div>
+							
+								<div class = "col-md-6">
+									<p>ÅEéÔñ°Ç»Ç«<p>
+									
+									<div class = " ft">
+									<input type="time" value = "00:00">Å`
+									<input type="time" value = "00:00">
+									</div>
+									
+								</div>
+								
+								<div class = "col-md-6">
+									<p>ÅEÇªÇÃëº<p>
+									
+									<div class = " ft">
+										<button>Å{</button>
+									</div>
+									
+								</div>
+							</div>
+						</div>
