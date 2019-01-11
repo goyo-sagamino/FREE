@@ -30,93 +30,112 @@
         
         <script src = "../script/script.js" type="text/javascript"></script>
         
+        
+        <div id = "personal">
+        
         <div class="label1">
             <p>FREE</p>
         </div>
+	        <div class="label2">
+	            <div class=" container">
+	                <div class="row">
+	                    <div class="col-md-2" id= "top">
+	                        <button type="button" class="btn btn-link">
+	                            <a href="index.html">トップ</a>
+	                        </button>
+	                    </div>
 
-        <div class="label2">
-            <div class=" container">
-                <div class="row">
-                    <div class="col-md-2" id= "top">
-                        <button type="button" class="btn btn-link">
-                            <a href="index.html">トップ</a>
-                        </button>
-                    </div>
+	                    <div class="col-md-2" id= "form">
+	                        <button type="button" class="btn btn-link">
+	                            <a href="form.html">フォーム</a>
+	                        </button>
+	                    </div>
 
-                    <div class="col-md-2" id= "form">
-                        <button type="button" class="btn btn-link">
-                            <a href="form.html">フォーム</a>
-                        </button>
-                    </div>
+	                    <div class="col-md-2" id= "report">
+	                        <button type="button" class="btn btn-link">
+	                            <a href="report.html">レポート</a>
+	                        </button>
+	                    </div>
 
-                    <div class="col-md-2" id= "report">
-                        <button type="button" class="btn btn-link">
-                            <a href="report.html">レポート</a>
-                        </button>
-                    </div>
+	                    <div class="col-md-2" id= "help">
+	                        <button type="button" class="btn btn-link">
+	                            <a href="help.html">ヘルプ</a>
+	                        </button>
+	                    </div>
 
-                    <div class="col-md-2" id= "help">
-                        <button type="button" class="btn btn-link">
-                            <a href="help.html">ヘルプ</a>
-                        </button>
-                    </div>
-
-                </div>
-            </div>
-        </div>
-		
-		<div class="main">
-	        <div class="container">
-	            <div class="row">
-	                <div class="col-md-12 content clock">
-	                
-	                	<p id = "date"></p>
-	                    <h1 id = "clock"></h1>
-	                    
-	                    <script type = "text/javascript">
-	                    	clock();
-	                    	
-	                    	function clock(){
-		                    	let time = new Date();
-		                    	let day = ["日","月","火","水","木","金","土"];
-		                    	document.getElementById("date").innerHTML = time.getFullYear() +"年"+ (time.getMonth()+1)+"月"+time.getDate()+"日"+"("+day[time.getDay()]+")"+"曜日";
-		                    	document.getElementById("clock").innerHTML =time.toLocaleTimeString();
-	                    	}
-	                    	setInterval("clock()",1000)
-	                    </script>
 	                </div>
 	            </div>
 	        </div>
+			
+			<div class="main">
+		        <div class="container">
+		            <div class="row">
+		                <div class="col-md-12 content clock">
+		                
+		                	<p id = "date"></p>
+		                    <h1 id = "clock"></h1>
+		                    
+		                    <script type = "text/javascript">
+		                    	clock();
+		                    	
+		                    	function clock(){
+			                    	let time = new Date();
+			                    	let day = ["日","月","火","水","木","金","土"];
+			                    	document.getElementById("date").innerHTML = time.getFullYear() +"年"+ (time.getMonth()+1)+"月"+time.getDate()+"日"+"("+day[time.getDay()]+")"+"曜日";
+			                    	document.getElementById("clock").innerHTML =time.toLocaleTimeString();
+		                    	}
+		                    	setInterval("clock()",1000)
+		                    </script>
+		                </div>
+		            </div>
+		        </div>
 
-	        <div class="container">
-	            <div class="row">
-	                <div class = "col-md-7 content">
-	                <h2 class = "title" id = "hoge"></h2>
-	                	<div class = "col-md-12 row" id = "calenderBase">
-	                		<div id = "print"></div>
-	                		<div class = "col-md-12">
-	                		<button id="before">◀</button>
-	                		<button id = "return">戻る</button>
-	                		<button id="next">▶</button>
-	                		</div>
-	                		
-	                	</div>
-	                	<script src = "../script/calender.js" type="text/javascript"></script>
-	                	
-	                	
-	                </div>
-	                <script src = "../script/putDate.js" type="text/javascript"></script>
-	                <div class="col-md-5 content">
-	                    <h2 class="title">リマインダー</h2>
-	                    <div id = "reminder">
-	                    <div>
-	                </div>
-	            </div>
+		        <div class="container">
+		            <div class="row">
+		                <div class = "col-md-7 content">
+		                <h2 class = "title" id = "hoge"></h2>
+		                	<div class = "col-md-12 row" id = "calenderBase">
+		                		<div id = "print"></div>
+		                		<div class = "col-md-12">
+		                		<button id="before">◀</button>
+		                		<button id = "return">戻る</button>
+		                		<button id="next">▶</button>
+		                		</div>
+		                		
+		                	</div>
+		                	<script src = "../script/calender.js" type="text/javascript"></script>
+		                	
+		                	
+		                </div>
+		                <script src = "../script/putDate.js" type="text/javascript"></script>
+		                <div class="col-md-5 content">
+		                    <h2 class="title">リマインダー</h2>
+		                    <div id = "reminder">
+		                    </div>
+		                </div>
+		            </div>
+		        </div>
 	        </div>
         </div>
         
-        <script>
+        <div id = "gate">
+        	<div class="label1">
+            	<p>FREE</p>
+        	</div>
         	
-        </script>
+        	<div class = "main container">
+	        	<div class = "row">
+	        		<div class = "col-md-1"></div>
+	        		<div class = "content col-md-10 pf">
+			        	<p>パスワード</p>
+			        	<input id = "pass"></input>
+			        	<button id = "submitPass">Go</button>
+		        	</div>
+		        	<div class = "col-md-1"></div>
+		        </div>
+	        </div>
+        </div>
+        
+        <script src = "../script/top.js" type = "text/javascript"></script>
     </body>
 </html>
