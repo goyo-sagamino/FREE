@@ -164,21 +164,27 @@ var layer = function(num){
 			
 			var button1 = document.createElement("button");
 			var button2 = document.createElement("button");
+			var button3 = document.createElement("button");
 			button1.setAttribute("id","returnFromLayer");
 			button2.setAttribute("id","setReminder");
+			button3.setAttribute("id","printReminder");
 			button1.setAttribute("class","onTheLayer");
 			button2.setAttribute("class","onTheLayer");
+			button3.setAttribute("class","onTheLayer");
 			
 			var text5 = document.createTextNode("戻る");
 			var text6 = document.createTextNode("リマインダーを設定");
+			var text7 = document.createTextNode("リマインダーの確認");
 			
 			layer.appendChild(text);
 			div1.appendChild(br);
 			div1.appendChild(br);
 			button1.appendChild(text5);
 			button2.appendChild(text6);
+			button3.appendChild(text7);
 			div1.appendChild(button1);
 			div1.appendChild(button2);
+			div1.appendChild(button3);
 			layer.appendChild(div1);
 			base.appendChild(layer);
 			

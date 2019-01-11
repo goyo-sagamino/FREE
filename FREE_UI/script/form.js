@@ -2,6 +2,28 @@ var target1 = document.getElementById("firstDiv");
 var target2 = document.getElementById("seconDiv");
 var target3 = document.getElementById("thirDiv");
 
+var chart = function(){
+	var ctx = document.getElementById("graphField");
+	var myChart = new Chart(ctx, {
+		type: 'pie',
+		data: {
+			labels: ['睡眠', '朝食', '学校または仕事', '自主学習', '夕食', '趣味など', 'その他'],
+			datasets:[{
+				backgroundColor:[
+					"rgba(128,0,128,0.4)",
+					"rgba(220,20,60,0.4)",
+					"rgba(255,165,0,0.4)",
+					"rgba(255,255,0,0.4)",
+					"rgba(154,205,50,0.4)",
+					"rgba(102,205,170,0.4)",
+					"rgba(72,61,139,0.4)"
+				],
+				data: [6, 1, 6, 3, 5, 1, 3]
+			}]
+		},
+	});
+};
+
 var div2 = document.getElementById("seconDiv");
 var title = ["・就寝時間", "・朝食", "・学校または仕事", "・自主学習", "・夕食", "・趣味など", "・その他"];
 for (var i in title) {
@@ -19,6 +41,7 @@ for (var i in title) {
 	timeInput1.classList.add("new");
 	timeInput1.setAttribute("type", "time");
 	timeInput1.setAttribute("value", "00:00");
+	timeInput1.setAttribute("class","i1");
 
 	var mark = document.createTextNode("～");
 
@@ -26,6 +49,7 @@ for (var i in title) {
 	timeInput2.classList.add("new");
 	timeInput2.setAttribute("type", "time");
 	timeInput2.setAttribute("value", "00:00");
+	timeInput2.setAttribute("class","i2");
 
 	div3.appendChild(p);
 	p.appendChild(text);
@@ -115,10 +139,25 @@ document.getElementById("weekdays").onclick = function () {
 	target2.style.display = "block";
 	target3.style.display = "none";
 	
+	var forms1 = document.getElementsByClassName("i1");
+	var forms2 = document.getElementsByClassName("i2");
+	for (var count in forms1){
+		if (count === "length"){
+			break;
+		}; 
+		console.log(count);
+		var valform1 = forms1[count].value;
+		var valform2 = forms2[count].value;
+		console.log(valform2-valform1);
+	};
+	chart();
+
+	
 	document.getElementById("ret1").onclick = function(){
 		target1.style.display = "block";
 		target2.style.display = "none";
 		target3.style.display = "none";
+
 	};
 };
 
@@ -126,11 +165,14 @@ document.getElementById("holidays").onclick = function () {
 	target1.style.display = "none";
 	target2.style.display = "none";
 	target3.style.display = "block";
+	chart();
+
 	
 	document.getElementById("ret2").onclick = function(){
 		target1.style.display = "block";
 		target2.style.display = "none";
 		target3.style.display = "none";
+
 	};
 };
 

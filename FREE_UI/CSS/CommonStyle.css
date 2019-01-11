@@ -33,7 +33,7 @@ body{
 }
 
 .main{
-	position: absolute;
+	position: relative;
 	top:80px;
 	z-index:1;
 	width:100%;
@@ -121,11 +121,11 @@ td:active{
 
 #layerBase{
 	position:absolute;
-	left:30px;
+	left:20px;
 	top:60px;
 	height: 410px;
-	width: 90%;
-	max-width: 570px;
+	width: 93%;
+	max-width: 650px;
 	background-color:rgba(0,0,0,0.8);
 	z-index:2;
 	color:white;
@@ -156,4 +156,8 @@ chart{
 	margin-left: 20px;
 	width: 90%;
 	max-width: 450px;
+}
+
+.check{
+	border-bottom: 2px dotted #2f4f4f;
 }
